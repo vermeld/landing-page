@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamDirekt - Tu Plataforma de Streaming</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">StreamDirekt</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="login-button" id="loginBtn">Iniciar Sesión</button>
+        </nav>
+    </header>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember"> Recordarme
+                    </label>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Iniciar Sesión</button>
+                    <button type="button" class="cancel-button" id="closeLoginForm">Cancelar</button>
+                </div>
+                <div class="register-link">
+                    <p>¿No tienes una cuenta? <a href="#" id="registerLink">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Contraseña</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="terms">
+                        <input type="checkbox" name="terms" required>
+                        Acepto los <a href="#">Términos y Condiciones</a>
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">Registrarse</button>
+                <div class="login-link">
+                    <p>¿Ya tienes una cuenta? <a href="#" id="loginLink">Inicia Sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Disfruta del Mejor Entretenimiento</h1>
+            <p>Películas, series y documentales exclusivos en un solo lugar</p>
+            <a href="#planes" class="cta-button">Comenzar Prueba Gratis</a>
+        </div>
+    </section>
+
+    <section id="planes">
+        <h2>Planes de Suscripción</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>Básico</h3>
+                <div class="price">$8.000<span>/mes</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 1 pantalla simultánea</li>
+                    <li><i class="fas fa-check"></i> Calidad HD</li>
+                    <li><i class="fas fa-check"></i> Acceso a todo el catálogo</li>
+                    <li><i class="fas fa-check"></i> Sin anuncios</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+            <div class="plan-card featured">
+                <h3>Estándar</h3>
+                <div class="price">$12.000<span>/mes</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 2 pantallas simultáneas</li>
+                    <li><i class="fas fa-check"></i> Calidad Full HD</li>
+                    <li><i class="fas fa-check"></i> Acceso a todo el catálogo</li>
+                    <li><i class="fas fa-check"></i> Sin anuncios</li>
+                    <li><i class="fas fa-check"></i> Descargas offline</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+            <div class="plan-card">
+                <h3>Premium</h3>
+                <div class="price">$20.000<span>/mes</span></div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 4 pantallas simultáneas</li>
+                    <li><i class="fas fa-check"></i> Calidad 4K Ultra HD</li>
+                    <li><i class="fas fa-check"></i> Acceso a todo el catálogo</li>
+                    <li><i class="fas fa-check"></i> Sin anuncios</li>
+                    <li><i class="fas fa-check"></i> Descargas offline</li>
+                    <li><i class="fas fa-check"></i> Contenido exclusivo</li>
+                </ul>
+                <button class="plan-button">Elegir Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contenido">
+        <h2>Contenido Exclusivo</h2>
+        <div class="content-categories">
+            <div class="category">
+                <h3>Películas</h3>
+                <div class="content-grid">
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                </div>
+            </div>
+            <div class="category">
+                <h3>Series</h3>
+                <div class="content-grid">
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                    <div class="content-item"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>¿Necesitas Ayuda?</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <select required>
+                    <option value="" disabled selected>Selecciona un tema</option>
+                    <option value="soporte">Soporte Técnico</option>
+                    <option value="facturacion">Facturación</option>
+                    <option value="cuenta">Cuenta</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <textarea placeholder="Describe tu consulta" required></textarea>
+                <button type="submit" class="submit-button">Enviar Consulta</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StreamDirekt</h3>
+                <p>Tu plataforma de streaming favorita</p>
+                <div class="app-download">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Soporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StreamDirekt. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 
